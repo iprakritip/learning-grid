@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container >div{
+  background: blue;
+  padding: 1em;
+}
+.container >div:nth-child(odd){
+  background: pink;
+}
+.container {
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+grid-auto-columns: 1fr;
+  grid-gap: 1em;
+  grid-auto-rows: minmax (100px, auto); /*minmax stretches the box as per the content size*/
+grid-template-areas:
+'one one four'
+'two three four'
+/* 'two three four' */
+}
+/*.box1 {
+  grid-column: 1/span 2;
+}
+.box2 {
+  grid-row: 2;
+ } */
+.box1{
+  grid-area: one;
+}
+.box2 {
+  grid-area: two;
+}
+.box3{
+  grid-area: three;
+
+}.box4 {
+  grid-area: four;
+
+}
